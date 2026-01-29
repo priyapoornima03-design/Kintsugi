@@ -1,131 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Kintsugi Software Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <style>
-        :root { --gold: #c5a059; --dark: #121212; --light: #f8f9fa; }
-        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
-        
-        /* Stop horizontal scroll on mobile */
-        html, body { width: 100%; overflow-x: hidden; position: relative; }
-        body { font-family: 'Inter', sans-serif; color: var(--dark); background: #fff; line-height: 1.5; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kintsugi Software Solutions</title>
 
-        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 1.2rem; }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        /* Mobile Header */
-        nav { padding: 1rem 0; border-bottom: 1px solid #eee; background: #fff; }
-        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; text-decoration: none; color: var(--dark); }
-        .logo span { color: var(--gold); }
+    header {
+      padding: 20px 40px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        /* Hero - Scaled for Mobile */
-        .hero { padding: 3rem 0; background: linear-gradient(180deg, #fff 0%, var(--light) 100%); }
-        .tag { color: var(--gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.5rem; display: block; }
-        h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; line-height: 1.1; margin-bottom: 1rem; }
-        h1 span { color: var(--gold); font-style: italic; }
-        .hero p { font-size: 1rem; color: #555; margin-bottom: 1.5rem; }
+    header h1 {
+      font-size: 20px;
+      margin: 0;
+      color: #2c2c2c;
+    }
 
-        /* Pedigree Bar */
-        .pedigree { background: var(--dark); color: #fff; padding: 1.5rem 0; text-align: center; }
-        .pedigree p { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6; margin-bottom: 0.5rem; }
-        .pedigree strong { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--gold); letter-spacing: 1px; }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #555;
+      font-size: 14px;
+    }
 
-        /* Content Blocks */
-        section { padding: 3rem 0; }
-        h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.5rem; }
-        
-        .service-list { list-style: none; }
-        .service-item { padding: 1.5rem; border: 1px solid #eee; margin-bottom: 1rem; border-radius: 4px; }
-        .service-item h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--gold); }
+    nav a:hover {
+      color: #000;
+    }
 
-        /* The Story */
-        .story-box { background: var(--light); padding: 2rem 1.2rem; border-left: 3px solid var(--gold); }
-        .story-box p { margin-bottom: 1rem; font-size: 0.95rem; }
+    .hero {
+      padding: 80px 40px;
+      background: linear-gradient(135deg, #fafafa, #f1f1f1);
+      text-align: center;
+    }
 
-        /* Bottom Action Buttons */
-        .footer-actions { position: fixed; bottom: 0; width: 100%; display: flex; z-index: 100; }
-        .footer-actions a { flex: 1; text-align: center; padding: 1rem; text-decoration: none; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; }
-        .btn-li { background: #0077b5; color: white; }
-        .btn-mail { background: var(--dark); color: white; }
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #222;
+    }
 
-        /* Desktop Fixes */
-        @media (min-width: 768px) {
-            h1 { font-size: 3.5rem; }
-            h2 { font-size: 2.5rem; }
-            .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
-            .hero { padding: 6rem 0; }
-            .footer-actions { width: auto; right: 2rem; bottom: 2rem; border-radius: 5px; overflow: hidden; }
-        }
-        
-        /* Footer spacing for mobile buttons */
-        footer { padding: 3rem 0 6rem; border-top: 1px solid #eee; text-align: center; font-size: 0.8rem; }
-    </style>
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+      color: #555;
+    }
+
+    .hero a {
+      display: inline-block;
+      padding: 12px 28px;
+      background-color: #222;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 15px;
+    }
+
+    .hero a:hover {
+      background-color: #000;
+    }
+
+    section {
+      padding: 60px 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h3 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service-box {
+      padding: 25px;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      background-color: #fff;
+    }
+
+    .service-box h4 {
+      margin-top: 0;
+      color: #111;
+    }
+
+    footer {
+      padding: 30px 40px;
+      background-color: #f8f8f8;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+    }
+
+    footer a {
+      color: #333;
+      text-decoration: none;
+    }
+  </style>
 </head>
+
 <body>
 
+  <header>
+    <h1>Kintsugi Software Solutions</h1>
     <nav>
-        <div class="container nav-flex">
-            <a href="#" class="logo">KINTSUGI<span>.</span></a>
-            <a href="https://www.linkedin.com/in/priya-vinitha-rajan-b6873b25/" style="font-size: 0.7rem; font-weight: 700; color: var(--dark); text-decoration: none;">LINKEDIN</a>
-        </div>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    <header class="hero">
-        <div class="container">
-            <span class="tag">Engineering Boutique</span>
-            <h1>High-Trust <br><span>Digital Systems.</span></h1>
-            <p>Enterprise-grade Business Analysis and Quality Engineering for scaling businesses.</p>
-        </div>
-    </header>
+  <div class="hero">
+    <h2>Thoughtful Software. Built to Last.</h2>
+    <p>
+      We help businesses design, build, and improve software solutions with
+      a strong focus on quality, reliability, and long-term value.
+    </p>
+    <a href="#contact">Discuss Your Project</a>
+  </div>
 
-    <div class="pedigree">
-        <div class="container">
-            <p>Experience from leaders like</p>
-            <strong>AMDOCS &nbsp;|&nbsp; IBS SOFTWARE</strong>
-        </div>
+  <section id="services">
+    <h3>What We Do</h3>
+    <div class="services">
+      <div class="service-box">
+        <h4>Web & Application Development</h4>
+        <p>Clean, scalable web and application solutions tailored to your business needs.</p>
+      </div>
+      <div class="service-box">
+        <h4>Software Testing & QA</h4>
+        <p>Manual and functional testing to ensure stability, performance, and confidence.</p>
+      </div>
+      <div class="service-box">
+        <h4>Consulting & Analysis</h4>
+        <p>Requirement analysis, process improvement, and technology guidance.</p>
+      </div>
     </div>
+  </section>
 
-    <section class="container" id="expertise">
-        <h2>Our Solutions</h2>
-        <div class="grid">
-            <div class="service-item">
-                <h3>Quality Engineering</h3>
-                <p>UAT, System Integration, and End-to-End Testing cycles to ensure zero-leakage deployments.</p>
-            </div>
-            <div class="service-item">
-                <h3>Business Analysis</h3>
-                <p>Mapping complex billing logic and CRM requirements into actionable technical roadmaps.</p>
-            </div>
-            <div class="service-item">
-                <h3>Web Development</h3>
-                <p>Clean, maintainable code architectures built for long-term scalability and business growth.</p>
-            </div>
-        </div>
-    </section>
+  <section id="about">
+    <h3>About Us</h3>
+    <p>
+      Inspired by the art of <strong>Kintsugi</strong>, we believe software
+      should be strengthened through thoughtful design, testing, and care.
+      Our approach blends technical expertise with a deep understanding of business needs.
+    </p>
+  </section>
 
-    <section class="container">
-        <h2>The Founder</h2>
-        <div class="story-box">
-            <p><strong>Priya Vinitha Rajan</strong> is an Electronics and Communication Engineer specializing in high-complexity software delivery.</p>
-            <p>Kintsugi Software Solutions brings the "Zero-Failure" discipline of global tech giants to the SME market, ensuring every repair and build makes your system stronger.</p>
-        </div>
-    </section>
+  <section id="contact">
+    <h3>Contact</h3>
+    <p>
+      📧 <a href="mailto:info@kintsugisoftwaresolutions.com">
+      info@kintsugisoftwaresolutions.com</a><br/>
+      📞 <a href="tel:+919632692005">+91 96326 92005</a>
+    </p>
+  </section>
 
-    <footer>
-        <div class="container">
-            <p>Trivandrum • Remote Worldwide</p>
-            <p>+91 96326 92005</p>
-            <p style="margin-top: 1.5rem; opacity: 0.5;">© 2026 KINTSUGI SOFTWARE SOLUTIONS</p>
-        </div>
-    </footer>
-
-    <div class="footer-actions">
-        <a href="https://www.linkedin.com/in/priya-vinitha-rajan-b6873b25/" class="btn-li">LinkedIn</a>
-        <a href="mailto:priya@kintsugisoftwaresolutions.com" class="btn-mail">Email</a>
-    </div>
+  <footer>
+    © 2026 Kintsugi Software Solutions. All rights reserved.
+  </footer>
 
 </body>
 </html>
