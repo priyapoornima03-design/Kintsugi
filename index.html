@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kintsugi Software Solutions | Resilience in Code</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Kintsugi Software Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --primary: #121212; --gold: #c5a059; --bg: #fcfcfc; --text-muted: #666; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--primary); background: var(--bg); line-height: 1.8; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+        
+        /* Nav */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; background: white; border-bottom: 1px solid #eee; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 600; }
+        .logo span { color: var(--gold); }
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { text-decoration: none; color: var(--primary); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Hero */
+        .hero { padding: 100px 0; text-align: center; background: radial-gradient(circle at top right, #fdfbf7, #fcfcfc); }
+        .subtitle { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem; font-weight: 600; margin-bottom: 1rem; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; line-height: 1.2; margin-bottom: 1.5rem; }
+        h1 span { font-style: italic; font-weight: 400; color: var(--gold); }
+        .hero-description { max-width: 600px; margin: 0 auto; color: var(--text-muted); font-size: 1.1rem; }
+
+        /* Services */
+        .services { padding: 80px 0; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .service-card { padding: 2.5rem; border: 1px solid #f0f0f0; background: white; transition: 0.3s; }
+        .service-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .gold-line { width: 30px; height: 2px; background: var(--gold); margin-bottom: 1.5rem; }
+        h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 1rem; }
+
+        /* Footer */
+        .footer { padding: 80px 0; background: var(--primary); color: white; text-align: center; }
+        .footer a { color: var(--gold); text-decoration: none; font-weight: 600; }
+        .copyright { margin-top: 3rem; font-size: 0.7rem; opacity: 0.4; }
+
+        @media (max-width: 768px) { h1 { font-size: 2.5rem; } nav ul { display: none; } }
+    </style>
 </head>
 <body>
 
@@ -13,8 +48,7 @@
         <div class="logo">KINTSUGI<span>.</span></div>
         <ul>
             <li><a href="#services">Services</a></li>
-            <li><a href="#about">Our Story</a></li>
-            <li><a href="#contact" class="btn-contact">Contact</a></li>
+            <li><a href="https://www.linkedin.com/in/priya-vinitha-rajan-b6873b25/">LinkedIn</a></li>
         </ul>
     </nav>
 
@@ -22,59 +56,37 @@
         <div class="container">
             <p class="subtitle">Precision Engineering • Strategic Quality</p>
             <h1>Building Resilient <span>Digital Systems.</span></h1>
-            <p class="hero-description">
-                High-performance Web Development, QA, and Business Analysis for SMEs. 
-                Enterprise standards, delivered with agile craftsmanship.
-            </p>
-            <a href="#services" class="btn-primary">Explore Our Services</a>
+            <p class="hero-description">High-performance Web Development, QA, and Business Analysis for SMEs. Enterprise standards, delivered with agile craftsmanship.</p>
         </div>
     </header>
 
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Our Solutions</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <div class="gold-line"></div>
-                    <h3>Quality Engineering</h3>
-                    <p>Leveraging deep experience in high-complexity CRM and Billing systems to ensure your product is bug-free and market-ready.</p>
-                </div>
-                <div class="service-card">
-                    <div class="gold-line"></div>
-                    <h3>Software Development</h3>
-                    <p>End-to-end web and mobile application development designed for scalability, security, and user experience.</p>
-                </div>
-                <div class="service-card">
-                    <div class="gold-line"></div>
-                    <h3>Strategic Analysis</h3>
-                    <p>Expert Business Analysis to align your technical roadmap with your commercial goals, ensuring efficiency at every stage.</p>
-                </div>
+    <section class="container services" id="services">
+        <h2 style="font-family: 'Playfair Display'; font-size: 2.2rem; text-align: center;">Our Expertise</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <div class="gold-line"></div>
+                <h3>Quality Engineering</h3>
+                <p>Leveraging deep experience in high-complexity CRM and Billing systems (Amdocs/IBS) to ensure your product is market-ready.</p>
+            </div>
+            <div class="service-card">
+                <div class="gold-line"></div>
+                <h3>Software Development</h3>
+                <p>End-to-end web and mobile applications designed for scalability, security, and exceptional user experience.</p>
+            </div>
+            <div class="service-card">
+                <div class="gold-line"></div>
+                <h3>Strategic Analysis</h3>
+                <p>Bridging the gap between business vision and technical execution to ensure your roadmap is efficient and actionable.</p>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
+    <footer class="footer">
         <div class="container">
-            <div class="about-text">
-                <h2>The Kintsugi Philosophy</h2>
-                <p>Kintsugi Software Solutions was founded on the principle that the most successful digital products are those built with resilience and foresight.</p>
-                <p>Led by <strong>Priya Vinitha Rajan</strong>, an Electronics and Communication Engineer with a career spanning global leaders like Amdocs and IBS, we bring enterprise-grade discipline to the agile world of SMEs.</p>
-                <p>We operate as a modern, distributed studio, enabling us to assemble the best technical talent to solve your specific business challenges.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact" class="footer">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">Let’s Connect</h2>
-            <div class="contact-details">
-                <p>Email: <a href="mailto:priya@kintsugisoftwaresolutions.com">priya@kintsugisoftwaresolutions.com</a></p>
-                <p>Location: Trivandrum • Remote Worldwide</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/priya-vinitha-rajan-b6873b25/" target="_blank">LinkedIn →</a>
-                </div>
-            </div>
-            <p class="copyright">© 2026 Kintsugi Software Solutions. All rights reserved.</p>
+            <h2 style="font-family: 'Playfair Display'; margin-bottom: 1rem;">Let's Connect</h2>
+            <p>Email: <a href="mailto:priya@kintsugisoftwaresolutions.com">priya@kintsugisoftwaresolutions.com</a></p>
+            <p style="margin-top: 10px;">Phone: +91 96326 92005</p>
+            <p class="copyright">© 2026 Kintsugi Software Solutions. Trivandrum • Remote Worldwide</p>
         </div>
     </footer>
 
