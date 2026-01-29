@@ -2,123 +2,129 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Kintsugi Software Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #c5a059; --dark: #0a0a0a; --gray: #f9f9f9; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { overflow-x: hidden; }
-        body { font-family: 'Inter', sans-serif; color: var(--dark); background: #fff; line-height: 1.6; overflow-x: hidden; }
+        :root { --gold: #c5a059; --dark: #121212; --light: #f8f9fa; }
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
         
-        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        /* Stop horizontal scroll on mobile */
+        html, body { width: 100%; overflow-x: hidden; position: relative; }
+        body { font-family: 'Inter', sans-serif; color: var(--dark); background: #fff; line-height: 1.5; }
 
-        /* Navigation */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; background: #fff; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #eee; }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; text-decoration: none; color: var(--dark); }
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 1.2rem; }
+
+        /* Mobile Header */
+        nav { padding: 1rem 0; border-bottom: 1px solid #eee; background: #fff; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; text-decoration: none; color: var(--dark); }
         .logo span { color: var(--gold); }
-        .nav-linkedin { text-decoration: none; color: var(--gold); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* Hero */
-        .hero { padding: 60px 0; background: linear-gradient(to bottom right, #fff, #fcfaf5); }
-        .hero-label { color: var(--gold); font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 1rem; display: block; }
-        /* Responsive Font Size */
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 8vw, 4rem); line-height: 1.1; margin-bottom: 1.5rem; }
-        .hero p { font-size: 1.1rem; color: #555; max-width: 600px; margin-bottom: 2rem; }
+        /* Hero - Scaled for Mobile */
+        .hero { padding: 3rem 0; background: linear-gradient(180deg, #fff 0%, var(--light) 100%); }
+        .tag { color: var(--gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.5rem; display: block; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; line-height: 1.1; margin-bottom: 1rem; }
+        h1 span { color: var(--gold); font-style: italic; }
+        .hero p { font-size: 1rem; color: #555; margin-bottom: 1.5rem; }
 
-        /* Mobile-Friendly Pedigree */
-        .pedigree { background: var(--dark); color: #fff; padding: 2rem 1.5rem; text-align: center; }
-        .pedigree-text { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6; margin-bottom: 0.5rem; }
-        .pedigree-brands { font-family: 'Playfair Display', serif; font-size: 1.1rem; letter-spacing: 1px; color: var(--gold); }
+        /* Pedigree Bar */
+        .pedigree { background: var(--dark); color: #fff; padding: 1.5rem 0; text-align: center; }
+        .pedigree p { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6; margin-bottom: 0.5rem; }
+        .pedigree strong { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--gold); letter-spacing: 1px; }
 
-        /* Service Cards */
-        .services { padding: 60px 0; background: #fff; }
-        .grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2rem; }
-        .card { padding: 2rem; border: 1px solid #eee; border-radius: 8px; }
-        .card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 0.8rem; }
-        .card p { font-size: 0.95rem; color: #666; }
+        /* Content Blocks */
+        section { padding: 3rem 0; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.5rem; }
+        
+        .service-list { list-style: none; }
+        .service-item { padding: 1.5rem; border: 1px solid #eee; margin-bottom: 1rem; border-radius: 4px; }
+        .service-item h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--gold); }
 
-        /* Story Section */
-        .story { padding: 60px 0; background: var(--gray); }
-        .story h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1.5rem; }
-        .story p { margin-bottom: 1rem; color: #444; }
+        /* The Story */
+        .story-box { background: var(--light); padding: 2rem 1.2rem; border-left: 3px solid var(--gold); }
+        .story-box p { margin-bottom: 1rem; font-size: 0.95rem; }
 
-        /* THE MOBILE ACTION BAR */
-        .action-bar { position: fixed; bottom: 0; left: 0; width: 100%; display: flex; z-index: 2000; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); }
-        .action-bar a { flex: 1; text-align: center; padding: 1.2rem; text-decoration: none; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
-        .bar-email { background: var(--dark); color: #fff; }
-        .bar-li { background: #0077B5; color: #fff; }
+        /* Bottom Action Buttons */
+        .footer-actions { position: fixed; bottom: 0; width: 100%; display: flex; z-index: 100; }
+        .footer-actions a { flex: 1; text-align: center; padding: 1rem; text-decoration: none; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; }
+        .btn-li { background: #0077b5; color: white; }
+        .btn-mail { background: var(--dark); color: white; }
 
-        /* Footer Padding for the Bar */
-        footer { padding: 60px 0 120px; text-align: center; background: #fff; border-top: 1px solid #eee; }
-
-        /* Desktop Adjustments */
+        /* Desktop Fixes */
         @media (min-width: 768px) {
-            .grid { grid-template-columns: repeat(3, 1fr); }
-            .hero { padding: 120px 0; }
-            .pedigree { padding: 3rem; display: flex; justify-content: center; gap: 40px; }
-            .action-bar { width: auto; left: auto; right: 2rem; bottom: 2rem; flex-direction: column; border-radius: 8px; overflow: hidden; }
-            .action-bar a { padding: 1rem 2rem; border: 1px solid transparent; }
+            h1 { font-size: 3.5rem; }
+            h2 { font-size: 2.5rem; }
+            .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+            .hero { padding: 6rem 0; }
+            .footer-actions { width: auto; right: 2rem; bottom: 2rem; border-radius: 5px; overflow: hidden; }
         }
+        
+        /* Footer spacing for mobile buttons */
+        footer { padding: 3rem 0 6rem; border-top: 1px solid #eee; text-align: center; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#" class="logo">KINTSUGI<span>.</span></a>
-        <a href="https://www.linkedin.com/in/priya-vinitha-rajan-b6873b25/" class="nav-linkedin" target="_blank">LinkedIn</a>
+        <div class="container nav-flex">
+            <a href="#" class="logo">KINTSUGI<span>.</span></a>
+            <a href="https://www.linkedin.com/in/priya-vinitha-rajan-b6873b25/" style="font-size: 0.7rem; font-weight: 700; color: var(--dark); text-decoration: none;">LINKEDIN</a>
+        </div>
     </nav>
 
-    <header class="hero container">
-        <span class="hero-label">Engineering Boutique</span>
-        <h1>Resilient Systems. <br>Enterprise Logic.</h1>
-        <p>Strategic Business Analysis and Quality Engineering for the modern enterprise. We bridge the gap between complex logic and scalable code.</p>
+    <header class="hero">
+        <div class="container">
+            <span class="tag">Engineering Boutique</span>
+            <h1>High-Trust <br><span>Digital Systems.</span></h1>
+            <p>Enterprise-grade Business Analysis and Quality Engineering for scaling businesses.</p>
+        </div>
     </header>
 
     <div class="pedigree">
-        <div>
-            <div class="pedigree-text">Foundation built at</div>
-            <div class="pedigree-brands">AMDOCS &nbsp;|&nbsp; IBS SOFTWARE</div>
+        <div class="container">
+            <p>Experience from leaders like</p>
+            <strong>AMDOCS &nbsp;|&nbsp; IBS SOFTWARE</strong>
         </div>
     </div>
 
-    <section class="container services">
-        <span class="hero-label">Core Solutions</span>
+    <section class="container" id="expertise">
+        <h2>Our Solutions</h2>
         <div class="grid">
-            <div class="card">
-                <h3>Strategic QA</h3>
-                <p>Enterprise-grade testing protocols. Zero-leakage deployments and robust system validation.</p>
+            <div class="service-item">
+                <h3>Quality Engineering</h3>
+                <p>UAT, System Integration, and End-to-End Testing cycles to ensure zero-leakage deployments.</p>
             </div>
-            <div class="card">
+            <div class="service-item">
                 <h3>Business Analysis</h3>
-                <p>Translating commercial vision into technical architecture. Precise requirements engineering.</p>
+                <p>Mapping complex billing logic and CRM requirements into actionable technical roadmaps.</p>
             </div>
-            <div class="card">
-                <h3>Scalable Dev</h3>
-                <p>Full-stack web and mobile applications engineered for long-term maintainability.</p>
+            <div class="service-item">
+                <h3>Web Development</h3>
+                <p>Clean, maintainable code architectures built for long-term scalability and business growth.</p>
             </div>
         </div>
     </section>
 
-    <section class="story">
-        <div class="container">
-            <h2>The Kintsugi Way</h2>
-            <p>Founded by <strong>Priya Vinitha Rajan</strong>, an Electronics and Communication Engineer, Kintsugi Software Solutions is rooted in the "Zero-Failure" philosophy of global tech leaders.</p>
-            <p>We treat software repair and refinement as an art form, making systems stronger and more valuable through strategic engineering.</p>
+    <section class="container">
+        <h2>The Founder</h2>
+        <div class="story-box">
+            <p><strong>Priya Vinitha Rajan</strong> is an Electronics and Communication Engineer specializing in high-complexity software delivery.</p>
+            <p>Kintsugi Software Solutions brings the "Zero-Failure" discipline of global tech giants to the SME market, ensuring every repair and build makes your system stronger.</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p style="margin-bottom: 10px;">priya@kintsugisoftwaresolutions.com</p>
+            <p>Trivandrum • Remote Worldwide</p>
             <p>+91 96326 92005</p>
-            <p style="margin-top: 2rem; font-size: 0.7rem; opacity: 0.4;">© 2026 KINTSUGI SOFTWARE SOLUTIONS.</p>
+            <p style="margin-top: 1.5rem; opacity: 0.5;">© 2026 KINTSUGI SOFTWARE SOLUTIONS</p>
         </div>
     </footer>
 
-    <div class="action-bar">
-        <a href="https://www.linkedin.com/in/priya-vinitha-rajan-b6873b25/" class="bar-li" target="_blank">LinkedIn</a>
-        <a href="mailto:priya@kintsugisoftwaresolutions.com" class="bar-email">Email Us</a>
+    <div class="footer-actions">
+        <a href="https://www.linkedin.com/in/priya-vinitha-rajan-b6873b25/" class="btn-li">LinkedIn</a>
+        <a href="mailto:priya@kintsugisoftwaresolutions.com" class="btn-mail">Email</a>
     </div>
 
 </body>
