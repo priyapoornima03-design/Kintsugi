@@ -3,171 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kintsugi Software Solutions | Enterprise-Grade Excellence</title>
+    <title>Kintsugi Software Solutions | Resilience in Systems</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,700&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #0f172a; --gold: #c5a059; --light-gold: #fcf8ef; --slate: #64748b; }
+        :root { --primary: #121212; --gold: #c5a059; --bg: #fdfdfd; --muted: #6b7280; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--primary); background: #fff; line-height: 1.7; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        body { font-family: 'Inter', sans-serif; color: var(--primary); background: var(--bg); line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
         
-        /* Header */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 5%; background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--primary); }
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 5%; background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 700; color: var(--primary); text-decoration: none; }
         .logo span { color: var(--gold); }
         nav ul { display: flex; list-style: none; gap: 2.5rem; }
-        nav a { text-decoration: none; color: var(--primary); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        nav a { text-decoration: none; color: var(--primary); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; }
 
-        /* Hero */
-        .hero { padding: 160px 0 100px; background: linear-gradient(135deg, #fff 0%, var(--light-gold) 100%); position: relative; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; line-height: 1.1; margin-bottom: 2rem; }
-        .hero p { font-size: 1.4rem; color: var(--slate); max-width: 800px; margin-bottom: 3rem; font-weight: 300; }
+        /* Hero: The Engineering Statement */
+        .hero { padding: 120px 0; background: radial-gradient(circle at top right, #f9f6f0, #fff); border-bottom: 1px solid #f0f0f0; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.8rem; line-height: 1.1; margin-bottom: 1.5rem; }
+        .hero h1 span { font-style: italic; font-weight: 400; color: var(--gold); }
+        .hero p { font-size: 1.25rem; color: var(--muted); max-width: 750px; margin-bottom: 2.5rem; }
 
-        /* The "Difference" Section */
-        .difference { padding: 100px 0; background: var(--primary); color: #fff; }
-        .diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-        .diff-text h2 { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 2rem; color: var(--gold); }
-        .diff-item { margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; }
-        .diff-item h4 { color: var(--gold); margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; }
+        /* Philosophy & Core Pillars */
+        .pillars { padding: 100px 0; background: #fff; }
+        .section-tag { color: var(--gold); text-transform: uppercase; font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; margin-bottom: 1rem; display: block; }
+        .pillar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; margin-top: 3rem; }
+        .pillar-item h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.2rem; }
+        .pillar-item p { color: var(--muted); margin-bottom: 1.5rem; }
+        .tech-list { list-style: none; border-top: 1px solid #eee; padding-top: 1.5rem; }
+        .tech-list li { font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--gold); text-transform: uppercase; }
 
-        /* Methodology Section */
-        .method { padding: 100px 0; background: #fff; text-align: center; }
-        .method h2 { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 4rem; }
-        .step-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
-        .step { padding: 2rem; background: var(--light-gold); border-radius: 4px; position: relative; }
-        .step-num { position: absolute; top: -20px; left: 20px; font-size: 3rem; font-weight: 800; color: rgba(197, 160, 89, 0.2); }
+        /* Expertise Context: The Amdocs/IBS Connection */
+        .context { padding: 100px 0; background: var(--primary); color: #fff; }
+        .context-box { max-width: 800px; }
+        .context-box h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 2rem; color: var(--gold); }
+        .context-box p { font-size: 1.1rem; opacity: 0.8; margin-bottom: 1.5rem; }
 
-        /* About Detailed */
-        .about-full { padding: 100px 0; background: #f8fafc; }
-        .about-flex { display: flex; gap: 4rem; flex-wrap: wrap; }
-        .about-bio { flex: 2; min-width: 300px; }
-        .about-stats { flex: 1; min-width: 250px; background: white; padding: 3rem; border: 1px solid #e2e8f0; }
-        .stat-item { margin-bottom: 2rem; }
-        .stat-item h5 { font-size: 2rem; color: var(--gold); margin-bottom: 0.2rem; }
-
-        /* Footer */
-        .footer { background: var(--primary); color: white; padding: 100px 0 50px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
-        .footer h3 { font-family: 'Playfair Display'; font-size: 2rem; color: var(--gold); margin-bottom: 1.5rem; }
+        /* Contact Block */
+        .contact-footer { padding: 100px 0; text-align: center; border-top: 1px solid #eee; }
+        .contact-footer h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 2rem; }
+        .contact-email { font-size: 1.8rem; color: var(--gold); text-decoration: none; font-weight: 300; border-bottom: 1px solid var(--gold); }
         
+        .footer-bottom { padding: 40px 0; text-align: center; border-top: 1px solid #eee; font-size: 0.8rem; color: var(--muted); }
+
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8rem; }
-            .diff-grid, .step-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+            nav ul { display: none; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">KINTSUGI<span>.</span></div>
+        <a href="#" class="logo">KINTSUGI<span>.</span></a>
         <ul>
+            <li><a href="#expertise">Expertise</a></li>
             <li><a href="#about">Our Story</a></li>
-            <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <header class="hero">
         <div class="container">
-            <p style="color:var(--gold); font-weight:700; text-transform:uppercase; letter-spacing:4px; margin-bottom:1rem;">Est. 2026 • Trivandrum</p>
-            <h1>Engineering Resilience. <br>Healing <span>Digital Systems.</span></h1>
-            <p>We bring the rigor of global telecom and financial enterprise systems to the SME landscape. Kintsugi Software Solutions is where elite Business Analysis meets high-stakes Quality Engineering.</p>
+            <span class="section-tag">Quality Engineering • Strategic Analysis</span>
+            <h1>Resilient Software <br>Built on <span>Enterprise Integrity.</span></h1>
+            <p>Specialized Web Development and Business Analysis for growing SMEs. We bring the rigor of large-scale systems to agile digital products.</p>
         </div>
     </header>
 
-    <section class="difference">
+    <section id="expertise" class="pillars">
         <div class="container">
-            <div class="diff-grid">
-                <div class="diff-text">
-                    <h2>Why Kintsugi?</h2>
-                    <p style="font-size: 1.2rem; opacity: 0.8; margin-bottom: 3rem;">We don't just write code. we build assets. Most agencies focus on "launching." We focus on "reliability."</p>
-                    
-                    <div class="diff-item">
-                        <h4>01. Enterprise DNA</h4>
-                        <p>Our foundation is built on systems that handle millions of transactions per second (Amdocs & IBS).</p>
-                    </div>
-                    <div class="diff-item">
-                        <h4>02. The BA Advantage</h4>
-                        <p>We bridge the gap between "Business Need" and "Technical Build." No more lost-in-translation errors.</p>
-                    </div>
-                    <div class="diff-item">
-                        <h4>03. Strategic QA</h4>
-                        <p>Quality is not a phase; it's a culture. We ensure zero-leakage deployments.</p>
-                    </div>
+            <div class="pillar-grid">
+                <div class="pillar-item">
+                    <h3>Strategic Quality Assurance</h3>
+                    <p>Moving beyond simple testing. We implement end-to-end quality protocols that ensure your product is stable, secure, and scalable from day one.</p>
+                    <ul class="tech-list">
+                        <li>User Acceptance Testing (UAT)</li>
+                        <li>System Integration Testing</li>
+                        <li>Zero-Leakage QA Deployment</li>
+                    </ul>
                 </div>
-                <div style="text-align: right;">
-                    <p style="font-family: 'Playfair Display'; font-size: 2.2rem; color: var(--gold); font-style: italic;">"Treating repair and resilience as a competitive advantage."</p>
+                <div class="pillar-item">
+                    <h3>Business Architecture</h3>
+                    <p>Bridging the gap between a business owner's vision and a developer's code. We translate complex needs into clear technical roadmaps.</p>
+                    <ul class="tech-list">
+                        <li>Requirement Engineering</li>
+                        <li>Process Optimization</li>
+                        <li>Agile SDLC Management</li>
+                    </ul>
+                </div>
+                <div class="pillar-item">
+                    <h3>Adaptive Development</h3>
+                    <p>Building modern web and mobile applications that don't just work—they grow. Architecture focused on long-term maintainability.</p>
+                    <ul class="tech-list">
+                        <li>Modern Web Frameworks</li>
+                        <li>API-First Architecture</li>
+                        <li>Cloud Integration</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="method" id="services">
+    <section id="about" class="context">
         <div class="container">
-            <h2>Our Methodology</h2>
-            <div class="step-grid">
-                <div class="step">
-                    <span class="step-num">01</span>
-                    <h3>Discovery</h3>
-                    <p>Deep dive into business logic, stakeholder pain points, and current technical debt.</p>
-                </div>
-                <div class="step">
-                    <span class="step-num">02</span>
-                    <h3>Analysis</h3>
-                    <p>Translating requirements into a robust, scalable technical architecture and roadmap.</p>
-                </div>
-                <div class="step">
-                    <span class="step-num">03</span>
-                    <h3>Execution</h3>
-                    <p>Agile development led by senior architects, ensuring code is lean, clean, and secure.</p>
-                </div>
-                <div class="step">
-                    <span class="step-num">04</span>
-                    <h3>Validation</h3>
-                    <p>Multi-layer QA cycles—from Unit testing to User Acceptance—ensuring a flawless exit.</p>
-                </div>
+            <div class="context-box">
+                <span class="section-tag">The Philosophy</span>
+                <h2>Why Kintsugi?</h2>
+                <p>Named after the Japanese art of repairing broken pottery with gold, our name signifies our belief that systems are strengthened through strategic refinement and resilience.</p>
+                <p>Our founder, <strong>Priya Vinitha Rajan</strong>, is an Electronics and Communication Engineer who honed her expertise within the high-complexity environments of <strong>Amdocs</strong> and <strong>IBS</strong>. Having managed mission-critical billing and CRM systems for global leaders, she founded Kintsugi to provide SMEs with the same "enterprise-grade" precision.</p>
+                <p>We operate as a remote-first studio based in Trivandrum, working with a hand-picked network of specialists to deliver high-impact results without agency overhead.</p>
             </div>
         </div>
     </section>
 
-    <section class="about-full" id="about">
+    <section id="contact" class="contact-footer">
         <div class="container">
-            <div class="about-flex">
-                <div class="about-bio">
-                    <h2 style="font-family:'Playfair Display'; font-size:3rem; margin-bottom:2rem;">The Architect</h2>
-                    <p style="font-size:1.1rem; margin-bottom:1.5rem;">Led by <strong>Priya Vinitha Rajan</strong>, an Electronics and Communication Engineer with a specialized background in Billing and CRM systems.</p>
-                    <p>Throughout her career at <strong>Amdocs</strong> and <strong>IBS</strong>, Priya has been at the center of high-complexity software delivery. She founded Kintsugi Software Solutions to bring this "Zero-Failure" philosophy to companies that are scaling fast and cannot afford downtime or buggy user experiences.</p>
-                    <p>Based in Trivandrum, we operate as a global remote studio, leveraging a hand-picked network of specialist developers to deliver elite-level results.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-item"><h5>10+</h5><p>Years of Engineering Experience</p></div>
-                    <div class="stat-item"><h5>Million+</h5><p>Lines of Code Validated</p></div>
-                    <div class="stat-item"><h5>Enterprise</h5><p>Standard Quality Protocols</p></div>
-                </div>
+            <span class="section-tag">Ready to start?</span>
+            <h2>Let's build something resilient.</h2>
+            <a href="mailto:priya@kintsugisoftwaresolutions.com" class="contact-email">priya@kintsugisoftwaresolutions.com</a>
+            <div style="margin-top: 3rem; font-weight: 600;">
+                <p>Trivandrum • Remote Worldwide</p>
+                <p>+91 96326 92005</p>
+                <a href="https://www.linkedin.com/in/priya-vinitha-rajan-b6873b25/" style="color:var(--gold); text-decoration:none; display:inline-block; margin-top:1rem;">Follow our journey on LinkedIn →</a>
             </div>
         </div>
     </section>
 
-    <footer class="footer" id="contact">
+    <div class="footer-bottom">
         <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h3>KINTSUGI.</h3>
-                    <p style="opacity:0.7;">Resilient Software. Stronger Systems. <br>Trivandrum, Kerala.</p>
-                </div>
-                <div>
-                    <h4 style="color:var(--gold); margin-bottom:1.5rem;">Direct Contact</h4>
-                    <p><a href="mailto:priya@kintsugisoftwaresolutions.com" style="color:#fff; text-decoration:none;">priya@kintsugisoftwaresolutions.com</a></p>
-                    <p style="margin-top:10px;">+91 96326 92005</p>
-                </div>
-                <div>
-                    <h4 style="color:var(--gold); margin-bottom:1.5rem;">Network</h4>
-                    <p><a href="https://www.linkedin.com/in/priya-vinitha-rajan-b6873b25/" style="color:#fff; text-decoration:none;">LinkedIn Profile</a></p>
-                </div>
-            </div>
-            <p style="text-align:center; opacity:0.3; font-size:0.8rem; border-top:1px solid rgba(255,255,255,0.1); padding-top:40px;">© 2026 Kintsugi Software Solutions. All rights reserved.</p>
+            © 2026 Kintsugi Software Solutions. All rights reserved.
         </div>
-    </footer>
+    </div>
 
 </body>
 </html>
