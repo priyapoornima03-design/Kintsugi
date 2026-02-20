@@ -5,55 +5,240 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kintsugi Software Solutions</title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Kintsugi Software Solutions</h1>
-    <p>Empowering Businesses with Thoughtful Software Solutions</p>
-    <button class="hero-btn">Start Your Project</button>
-  </header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+  <!-- Particle canvas background -->
+  <canvas id="particles"></canvas>
+
+  <!-- Golden crack overlay -->
+  <div class="crack-overlay"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-symbol">金</span>
+      <span class="logo-text">Kintsugi</span>
+    </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
   </nav>
 
+  <!-- HERO -->
   <section id="home" class="hero">
-    <h2>Welcome to Kintsugi</h2>
-    <p>We help growing businesses with scalable, reliable, and thoughtful software solutions.</p>
+    <div class="hero-content">
+      <p class="hero-tagline">Est. 2026 · Trivandrum, India</p>
+      <h1 class="hero-title">
+        <span class="line">Kintsugi</span>
+        <span class="line accent">Software</span>
+        <span class="line">Solutions</span>
+      </h1>
+      <p class="hero-sub">Empowering Businesses with Thoughtful Software Solutions</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Start Your Project</a>
+        <a href="#services" class="btn-ghost">Our Services</a>
+      </div>
+    </div>
+    <div class="hero-kintsugi-art">
+      <div class="circle-art">
+        <div class="circle-inner"></div>
+        <div class="gold-line gl1"></div>
+        <div class="gold-line gl2"></div>
+        <div class="gold-line gl3"></div>
+      </div>
+    </div>
   </section>
 
+  <!-- ABOUT -->
   <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>Founded by Priya,an Engineer with IT experience at Amdocs, IBS Software, and Travanleo Infosolutions and launched Kintsugi to help businesses grow with thoughtful software solutions.</p>
-    <p>Inspired by <strong>Kintsugi</strong> (resilience) and <strong>Kaizen</strong> (continuous improvement), we believe in building software with care, clarity, and long‑term value.</p>
+    <div class="section-label">// About Us</div>
+    <div class="about-grid">
+      <div class="about-left">
+        <h2>Broken &amp; <span class="gold">Rebuilt</span><br>Stronger</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="about-right">
+        <p class="about-lead">Founded by <strong>Priya</strong>, an Engineer with IT experience at Amdocs, IBS Software, and Travanleo Infosolutions.</p>
+        <p>Inspired by <strong class="gold">Kintsugi</strong> — the Japanese art of repairing broken pottery with gold — and <strong class="gold">Kaizen</strong> — continuous improvement — we believe every challenge is an opportunity to build something stronger and more beautiful.</p>
+        <p>We help businesses grow with software built for care, clarity, and long-term value.</p>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Companies Served</span></div>
+          <div class="stat"><span class="stat-num">4</span><span class="stat-label">Core Services</span></div>
+          <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Commitment</span></div>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- SERVICES -->
   <section id="services" class="services">
-    <h2>Our Services</h2>
-    <div class="service"><h3>Web Development</h3><p>Responsive, scalable websites built for growth.</p></div>
-    <div class="service"><h3>Mobile Apps</h3><p>End-to-end app development aligned with business goals.</p></div>
-    <div class="service"><h3>QA & Testing</h3><p>Structured testing to ensure stability and usability.</p></div>
-    <div class="service"><h3>Business Analysis</h3><p>Clarity and collaboration to build the right solution.</p></div>
+    <div class="section-label">// Services</div>
+    <h2 class="section-title">What We <span class="gold">Craft</span></h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">⬡</div>
+        <h3>Web Development</h3>
+        <p>Responsive, scalable websites built for growth and crafted with precision.</p>
+        <div class="card-line"></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">◈</div>
+        <h3>Mobile Apps</h3>
+        <p>End-to-end app development aligned with your business goals and users.</p>
+        <div class="card-line"></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">◎</div>
+        <h3>QA &amp; Testing</h3>
+        <p>Structured testing to ensure stability, performance, and usability.</p>
+        <div class="card-line"></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">◇</div>
+        <h3>Business Analysis</h3>
+        <p>Clarity and collaboration to help you build exactly the right solution.</p>
+        <div class="card-line"></div>
+      </div>
+    </div>
   </section>
 
+  <!-- PHILOSOPHY BANNER -->
+  <div class="philosophy-banner">
+    <p>"We do not hide the cracks — we illuminate them with gold."</p>
+  </div>
+
+  <!-- CONTACT -->
   <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/yourFormID" method="POST">
-      <label>Name:</label><input type="text" name="name" required>
-      <label>Email:</label><input type="email" name="email" required>
-      <label>Message:</label><textarea name="message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-    <p>📞 +91 96326 92005</p>
-    <p>📧 priyapoornima03@gmail.com</p>
-    <p>📍 Trivandrum</p>
+    <div class="section-label">// Contact</div>
+    <h2 class="section-title">Let's <span class="gold">Build</span> Together</h2>
+    <div class="contact-grid">
+      <form class="contact-form" action="https://formspree.io/f/yourFormID" method="POST">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+      <div class="contact-info">
+        <div class="info-block">
+          <span class="info-icon">📞</span>
+          <div>
+            <p class="info-label">Phone</p>
+            <p>+91 96326 92005</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <span class="info-icon">📧</span>
+          <div>
+            <p class="info-label">Email</p>
+            <p>priyapoornima03@gmail.com</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <span class="info-icon">📍</span>
+          <div>
+            <p class="info-label">Location</p>
+            <p>Trivandrum, Kerala, India</p>
+          </div>
+        </div>
+        <div class="kintsugi-quote">
+          <span class="quote-symbol">金</span>
+          <p>Every project is a piece of pottery waiting to be made whole — and beautiful.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>© 2026 Kintsugi Software Solutions</p>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-symbol">金</span> Kintsugi Software Solutions
+      </div>
+      <p class="footer-copy">© 2026 Kintsugi Software Solutions · Built with care &amp; gold</p>
+    </div>
   </footer>
+
+  <script>
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    for (let i = 0; i < 60; i++) {
+      particles.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        r: Math.random() * 1.5 + 0.3,
+        dx: (Math.random() - 0.5) * 0.3,
+        dy: (Math.random() - 0.5) * 0.3,
+        alpha: Math.random() * 0.5 + 0.1
+      });
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(212, 175, 55, ${p.alpha})`;
+        ctx.fill();
+        p.x += p.dx;
+        p.y += p.dy;
+        if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+      });
+      requestAnimationFrame(drawParticles);
+    }
+    drawParticles();
+
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section, .philosophy-banner').forEach(s => observer.observe(s));
+  </script>
+
 </body>
 </html>
+```
+
+**Important:** The CSS link on line 7 points to `css/style.css` — so make sure your folder structure is:
+```
+your-folder/
+├── index.html
+└── css/
+    └── style.css
