@@ -1,234 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kintsugi Software Solutions</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      color: #333;
-      line-height: 1.6;
-      background: #ffffff;
-    }
-
-    /* ---------- HEADER ---------- */
-    header {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: #111;
-      color: #fff;
-      padding: 15px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    header h1 {
-      font-size: 18px;
-      margin: 0;
-      font-weight: 600;
-    }
-
-    nav a {
-      color: #ddd;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: #c9a24d;
-    }
-
-    /* ---------- HERO ---------- */
-    .hero {
-      min-height: 90vh;
-      background: #2c2c2c;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 10%;
-      color: #fff;
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 44px;
-      line-height: 1.3;
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #ddd;
-      margin-bottom: 35px;
-    }
-
-    .cta {
-      padding: 14px 32px;
-      background: #c9a24d;
-      color: #111;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 4px;
-    }
-
-    /* ---------- SECTIONS ---------- */
-    section {
-      padding: 90px 10%;
-      max-width: 1300px;
-      margin: auto;
-    }
-
-    section h3 {
-      font-size: 32px;
-      margin-bottom: 30px;
-      color: #222;
-    }
-
-    /* ---------- SERVICES ---------- */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 35px;
-    }
-
-    .service-box {
-      background: #fff;
-      padding: 30px;
-      border-left: 4px solid #c9a24d;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    }
-
-    .service-box h4 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      color: #111;
-    }
-
-    /* ---------- VALUES ---------- */
-    .values ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .values li {
-      margin-bottom: 15px;
-      padding-left: 20px;
-      position: relative;
-    }
-
-    .values li::before {
-      content: "•";
-      color: #c9a24d;
-      font-size: 22px;
-      position: absolute;
-      left: 0;
-      top: -2px;
-    }
-
-    /* ---------- FOOTER ---------- */
-    footer {
-      background: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 40px 10%;
-      font-size: 14px;
-    }
-
-    footer a {
-      color: #c9a24d;
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      .hero h2 {
-        font-size: 32px;
-      }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+  <header>
+    <h1>Kintsugi Software Solutions</h1>
+    <p>Empowering Businesses with Thoughtful Software Solutions</p>
+    <button class="hero-btn">Start Your Project</button>
+  </header>
 
-<header>
-  <h1>Kintsugi Software Solutions</h1>
   <nav>
-    <a href="#services">Services</a>
+    <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#values">Values</a>
+    <a href="#services">Services</a>
     <a href="#contact">Contact</a>
   </nav>
-</header>
 
-<div class="hero">
-  <div>
-    <h2>Thoughtful Software Solutions<br/>Built with Care, Clarity & Experience</h2>
-    <p>We design, develop, and support web and mobile applications with a strong focus on quality, business understanding, and long-term value.</p>
-    <a class="cta" href="#contact">Discuss Your Project</a>
-  </div>
-</div>
+  <section id="home" class="hero">
+    <h2>Welcome to Kintsugi</h2>
+    <p>We help growing businesses with scalable, reliable, and thoughtful software solutions.</p>
+  </section>
 
-<section id="services">
-  <h3>Our Services</h3>
-  <div class="services">
-    <div class="service-box">
-      <h4>Web Development</h4>
-      <p>Responsive, scalable websites and web applications designed for performance and maintainability.</p>
-    </div>
-    <div class="service-box">
-      <h4>Mobile & Web App Development</h4>
-      <p>End-to-end application development aligned with user needs and business goals.</p>
-    </div>
-    <div class="service-box">
-      <h4>QA & Testing Support</h4>
-      <p>Structured manual testing to ensure stability, usability, and confidence before release.</p>
-    </div>
-    <div class="service-box">
-      <h4>Business Analysis & Consulting</h4>
-      <p>Requirement analysis, stakeholder collaboration, and clarity to build the right solution.</p>
-    </div>
-  </div>
-</section>
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Founded by Priya Poornima, an Electronics & Communication Engineer with 5 years of IT experience at Amdocs, IBS Software, and Travanleo Infosolutions. After a sabbatical, Priya returned to Trivandrum and launched Kintsugi to help businesses grow with thoughtful software solutions.</p>
+    <p>Inspired by <strong>Kintsugi</strong> (resilience) and <strong>Kaizen</strong> (continuous improvement), we believe in building software with care, clarity, and long‑term value.</p>
+  </section>
 
-<section id="about">
-  <h3>About Us</h3>
-  <p>Kintsugi Software Solutions was founded by an Electronics & Communication Engineer with professional experience across enterprise systems, telecom, airline software, and Agile product teams.</p>
-  <p>With experience at organizations such as Amdocs, IBS Software, and growing product teams, we understand software not only as technology, but as a system that must support real business processes and people.</p>
-  <p>Inspired by Japanese philosophies like <strong>Kintsugi</strong> and <strong>Kaizen</strong>, our approach focuses on thoughtful improvement, quality craftsmanship, and strengthening systems over time.</p>
-</section>
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service"><h3>Web Development</h3><p>Responsive, scalable websites built for growth.</p></div>
+    <div class="service"><h3>Mobile Apps</h3><p>End-to-end app development aligned with business goals.</p></div>
+    <div class="service"><h3>QA & Testing</h3><p>Structured testing to ensure stability and usability.</p></div>
+    <div class="service"><h3>Business Analysis</h3><p>Clarity and collaboration to build the right solution.</p></div>
+  </section>
 
-<section id="values" class="values">
-  <h3>Our Values</h3>
-  <ul>
-    <li><strong>Quality First:</strong> Doing things right matters more than doing them fast.</li>
-    <li><strong>Clarity:</strong> Clear understanding before implementation.</li>
-    <li><strong>Care:</strong> Software is built for people, not just systems.</li>
-    <li><strong>Continuous Improvement:</strong> Small, meaningful enhancements over time.</li>
-  </ul>
-</section>
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/yourFormID" method="POST">
+      <label>Name:</label><input type="text" name="name" required>
+      <label>Email:</label><input type="email" name="email" required>
+      <label>Message:</label><textarea name="message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p>📞 +91 96326 92005</p>
+    <p>📧 priyapoornima03@gmail.com</p>
+    <p>📍 Trivandrum</p>
+  </section>
 
-<section id="contact">
-  <h3>Contact</h3>
-  <p>
-    📧 <a href="mailto:info@kintsugisoftwaresolutions.com">info@kintsugisoftwaresolutions.com</a><br/>
-    📞 <a href="tel:+919632692005">+91 96326 92005</a>
-  </p>
-</section>
-
-<footer>
-  © 2026 Kintsugi Software Solutions. All rights reserved.
-</footer>
-
+  <footer>
+    <p>© 2026 Kintsugi Software Solutions</p>
+  </footer>
 </body>
 </html>
